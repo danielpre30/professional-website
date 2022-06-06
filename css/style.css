@@ -1,0 +1,165 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+  --black-olive: #424342;
+  --ocean-green: #61c9a8;
+  --lavender-web: #eeeeff;
+  --iris: #6153cc;
+  --rhythm: #7f7caf;
+  --white: #f7f8fa;
+  --font-size: 1rem;
+  --red-hat-display: "Red Hat Display", sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* generic styles for the page */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--red-hat-display);
+  background-color: var(--black-olive);
+  color: var(--white);
+  font-size: var(--font-size);
+  display: grid;
+  grid-template: 3fr 1fr / 1fr;
+  align-items: center;
+  max-height: 100vh;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+a {
+  color: var(--lavender-web);
+}
+
+a:hover {
+  color: var(--black-olive);
+  text-decoration: none;
+}
+
+button {
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  font-family: inherit;
+}
+
+/* background color divs*/
+.section-plum {
+  background-color: var(--ocean-green);
+}
+
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(97, 201, 168, 1) 0%,
+    rgba(134, 251, 251, 1) 100%
+  );
+  height: 2px;
+}
+
+/* intro styles */
+#intro {
+  max-width: 1200px;
+  margin: auto;
+  color: var(--ocean-green);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-size: 1rem;
+}
+
+#intro .profile-picture {
+  margin: 2rem 0;
+  border-radius: 100%;
+}
+
+.name span {
+  font-size: 3rem;
+  display: block;
+  font-weight: 700;
+}
+
+#intro h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+#intro .button {
+  background-color: var(--iris);
+  color: var(--lavender-web);
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  margin: 2rem 0;
+  width: max-content;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#intro .button:hover {
+  color: var(--black-olive);
+  background-color: var(--rhythm);
+}
+
+/* contact section */
+
+#contact {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+  color: var(--black-olive);
+  background-color: var(--ocean-green);
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 1.7rem;
+}
+
+@media (min-width: 720px) {
+  #intro {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  #intro p {
+    font-size: 1rem;
+  }
+
+  #intro .name {
+    font-size: 1rem;
+  }
+
+  .name span {
+    font-size: 4rem;
+  }
+
+  #intro h2 {
+    font-size: 4rem;
+  }
+}
