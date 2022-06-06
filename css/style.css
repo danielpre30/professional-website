@@ -112,6 +112,7 @@ button {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  font-weight: 500;
 }
 
 #intro .button:hover {
