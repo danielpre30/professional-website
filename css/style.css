@@ -69,7 +69,7 @@ button {
 /* intro styles */
 #intro {
   max-width: 1200px;
-  margin: auto;
+  margin: 3rem;
   color: var(--ocean-green);
   display: flex;
   flex-direction: column-reverse;
@@ -144,6 +144,7 @@ button {
 @media (min-width: 720px) {
   #intro {
     flex-direction: row;
+    margin: 3rem auto;
     gap: 3rem;
   }
 
